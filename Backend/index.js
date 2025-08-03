@@ -15,7 +15,7 @@ app.use(express.json());
 
 // ✅ Mount routes
 app.use('/api/v1/auth', authRoutes);
-// app.use('/api/v1/notes', require('./routes/notes'))
+app.use('/api/v1/notes', require('./routes/notes'))
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

@@ -1,4 +1,5 @@
 const express = require('express');
+var cors = require('cors')
 const connectToMongo = require('./db');
 const authRoutes = require('./routes/auth');
 
@@ -7,6 +8,7 @@ const port = 5000;
 
 // ✅ Connect to MongoDB
 connectToMongo();
+app.use(cors())
 
 //When a client sends this JSON body:
 //The middleware express.json() parses it and makes it accessible like:
